@@ -1,11 +1,10 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Result() {
   const { weatherData, loading, cityName, temperatureIn, setPageName } =
     useGlobalContext();
-  const history = useHistory();
   const tempApi = weatherData.main?.temp || 0;
   let capitalName;
 
