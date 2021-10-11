@@ -7,7 +7,6 @@ function Navbar() {
     <nav className='navbar navbar-dark bg-dark'>
       <div className='container-fluid'>
         <span className='navbar-text'>
-          {pageName}
           {pageName === 'result' ? 'Weather in your area' : 'Get your weather'}
         </span>
       </div>
