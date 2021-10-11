@@ -5,5 +5,7 @@ Used Tools: React, Context API, Bootstrap, React-router
 
 # To start project:
 
-npm i
-npm start
+Type in console:
+
+- npm i
+- npm start
