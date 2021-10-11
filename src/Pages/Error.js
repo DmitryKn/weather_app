@@ -13,9 +13,7 @@ function Error() {
           className='btn btn-primary mt-3'
           to='/'
           role='button'
-          onClick={() => {
-            setPageName('error');
-          }}
+          onClick={() => setPageName('home')}
         >
           Cancel
         </Link>

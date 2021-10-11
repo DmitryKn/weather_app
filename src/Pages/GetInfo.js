@@ -8,7 +8,7 @@ function GetInfo() {
   const [info, setInfo] = useState({ city: '', temperature: '' });
   const history = useHistory();
 
-  const handleCityAndTempChange = (e) => {
+  const handleChangeCityAndTemp = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setInfo({ ...info, [name]: value });
@@ -18,7 +18,7 @@ function GetInfo() {
     e.preventDefault();
     setCityName(info.city.toLowerCase());
     setTemperatureIn(info.temperature);
-    setPageName('getinfo');
+    setPageName('result');
     history.push('/result');
   };
 
@@ -42,7 +42,7 @@ function GetInfo() {
             name='city'
             type='text'
             value={info.city}
-            onChange={handleCityAndTempChange}
+            onChange={handleChangeCityAndTemp}
             placeholder='Enter City / Location'
           />
         </div>
@@ -55,7 +55,7 @@ function GetInfo() {
               name='temperature'
               id='Fahrenheit'
               value='Fahrenheit'
-              onChange={handleCityAndTempChange}
+              onChange={handleChangeCityAndTemp}
             />
             <label className='form-check-label' htmlFor='Fahrenheit'>
               Fahrenheit
@@ -68,7 +68,7 @@ function GetInfo() {
               name='temperature'
               id='Сelsius'
               value='Сelsius'
-              onChange={handleCityAndTempChange}
+              onChange={handleChangeCityAndTemp}
             />
             <label className='form-check-label' htmlFor='Сelsius'>
               Сelsius

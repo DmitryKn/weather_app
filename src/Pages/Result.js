@@ -1,10 +1,11 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 function Result() {
   const { weatherData, loading, cityName, temperatureIn, setPageName } =
     useGlobalContext();
+  const history = useHistory();
   const tempApi = weatherData.main?.temp || 0;
   let capitalName;
 
@@ -46,13 +47,16 @@ function Result() {
           className='btn btn-primary mt-3'
           to='/'
           role='button'
-          onClick={() => {
-            setPageName('result');
-          }}
+          onClick={() => setPageName('home')}
         >
           Close
         </Link>
-        <Link className='btn btn-primary mt-3 mx-4' to='/getinfo' role='button'>
+        <Link
+          className='btn btn-primary mt-3 mx-4'
+          to='/getinfo'
+          role='button'
+          onClick={() => setPageName('getinfo')}
+        >
           More Weather
         </Link>
       </div>

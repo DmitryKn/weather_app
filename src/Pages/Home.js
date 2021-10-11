@@ -15,7 +15,7 @@ function Home() {
   const handleSubmitName = (e) => {
     e.preventDefault();
     setUserFullName(name);
-    setPageName('home');
+    setPageName('getinfo');
     history.push('/getinfo');
   };
 
