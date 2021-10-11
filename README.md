@@ -1,9 +1,9 @@
 # Description:
 
 The weather SPA application.
-Used Tools: React, Context API, Bootstrap, React-router
+Used Tools: JavaScript, HTML, CSS, React, Context API, Bootstrap, React-router
 
-# To start project:
+# To start a project:
 
 Type in console:
 
